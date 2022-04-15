@@ -113,7 +113,7 @@ jobs:
           profile: minimal
           toolchain: stable
       - uses: Swatinem/rust-cache@v1
-      - name: Run tests
+      - name: Run Cargo Check
         uses: actions-rs/cargo@v1
         with:
           command: check
@@ -141,7 +141,7 @@ jobs:
           profile: minimal
           toolchain: stable
       - uses: Swatinem/rust-cache@v1
-      - name: Run tests
+      - name: Run Cargo Test
         uses: actions-rs/cargo@v1
         with:
           command: test
@@ -169,7 +169,7 @@ jobs:
           profile: minimal
           toolchain: stable
       - uses: Swatinem/rust-cache@v1
-      - name: Run tests
+      - name: Run Cargo Test without default features
         uses: actions-rs/cargo@v1
         with:
           command: test
